@@ -13,6 +13,11 @@
         - [Max and Min number]()
         - [concate string]()
         - [Ternary operator]()
+    - [jquery]()
+        - [ready function]()
+        - [data attribute]() 
+        - [prefix $]()
+        - [autocomplete]()
 
 
 ## Kiến thức chung
@@ -90,3 +95,40 @@
     }
     - If using break before label, you will break the loop that match with the label
     - If using continue before label, you will continue the loop that match the label
+
+### sourURL
+
+    Add this line before every *.js file to help browser regconize the using javascript file
+    //# sourceURL=card-reader.js
+
+## jquery
+
+### ready function
+
+    You can use the $(document).ready() function in jQuery to make sure your jQuery code is executed only after all the content of the HTML page has finished loading.
+
+    $(document).ready(function() {
+        // Your jQuery code here
+    });
+
+    Or Shorter version
+
+    $(function() {
+        // Your jQuery code here
+    });
+
+### data attribute
+
+    <input id="123" data-name="value">
+    <script>
+        var dataName = 'name';
+        console.log($('#123').data(dataName))
+    </script>
+
+    Result: value
+
+
+### prefix $
+
+    var $target = $(this);
+    prefix $ before variable name in JavaScript is a [convention] used to indicate that the variable holds a reference to JQuery object, rather than a standard JavaScript Object or a primitive value
