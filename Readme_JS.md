@@ -13,11 +13,15 @@
         - [Max and Min number]()
         - [concate string]()
         - [Ternary operator]()
+        - [forEach/for of/for ()]()
+        - [random]()
+        - [Get array keys and values of Object]()
     - [jquery]()
         - [ready function]()
         - [data attribute]() 
         - [prefix $]()
         - [autocomplete]()
+        - [ajax]()
 
 
 ## Kiến thức chung
@@ -101,6 +105,45 @@
     Add this line before every *.js file to help browser regconize the using javascript file
     //# sourceURL=card-reader.js
 
+### forEach/for (of)/for ()
+
+    // this is create a copy of an array
+    let arr = [...array];
+    // iterate through array like this can not perform break
+    arr.forEach(function (item, index) {
+        console.log(item);
+    });
+
+    // iterate through array like this support break method
+    for (let item of arr) {
+        console.log(item);
+        if (item == ",,,") {
+            break;
+        }
+    }
+    for (var i = 0; i < arr.length; i++) {
+        console.log(item[i]);
+        if (item[i] == ",,,") {
+            break;
+        }
+    }
+
+### random
+
+    Math.random() => is a built-in function in JavaScript that returns a random floating-point number between 0 and 1 (inclusive of 0, but exclusive of 1). This function can be used to generate random numbers or to simulate events that have a random chance of occurring.
+
+    let randomNum = Math.floor(Math.random() * 10);
+    => Create random number between 0 and 9
+
+    let randomNum = Math.floor(Math.random() * 10) + 1;
+    => Create random number between 1 and 10
+
+### Get array keys and values of Object
+
+    let object = {};
+    keys = Object.keys(object); // return array of keys in object
+    values = Object.values(object); // return array of values in object
+
 ## jquery
 
 ### ready function
@@ -132,3 +175,20 @@
 
     var $target = $(this);
     prefix $ before variable name in JavaScript is a [convention] used to indicate that the variable holds a reference to JQuery object, rather than a standard JavaScript Object or a primitive value
+
+### ajax
+
+    var AJAX_PARAM_DEFAULT = {
+        'url': null,
+        'async': true,
+        'crossDomain': false,
+        'requestType': "GET",
+        'contentType': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'dataType': 'json',
+        'processData': 'true',
+        'data': {},
+        'beforeSendCallbackFunction': null,
+        'successCallbackFunction': null,
+        'completeCallbackFunction': null,
+        'errorCallBackFunction': null
+    };
